@@ -16,6 +16,7 @@ import {
 } from './styles'
 
 export interface CarProps {
+  id: number;
   brand: string;
   name: string;
   rent: {
