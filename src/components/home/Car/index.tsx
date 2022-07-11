@@ -1,19 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-import { Gasoline } from '../../../assets'
+import { Gasoline } from '../../../assets';
 
 import {
   Container,
   Details,
   Brand,
   Name,
-  About, 
+  About,
   Rent,
   Period,
   Price,
   Type,
   CarImage,
-} from './styles'
+} from './styles';
 
 export interface CarProps {
   id: number;
@@ -26,7 +26,9 @@ export interface CarProps {
   thumbnail: string;
 }
 
-export function Car({ brand, name, rent, thumbnail }: CarProps) {
+export function Car({
+  brand, name, rent, thumbnail,
+}: CarProps) {
   return (
     <Container>
       <Details>
@@ -45,10 +47,10 @@ export function Car({ brand, name, rent, thumbnail }: CarProps) {
         </About>
       </Details>
 
-      <CarImage 
-        source={{ uri: thumbnail }} 
+      <CarImage
+        source={{ uri: thumbnail }}
         resizeMode="contain"
       />
     </Container>
-  )
+  );
 }

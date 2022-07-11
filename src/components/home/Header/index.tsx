@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 import Logo from './logo.svg';
 
 import {
-  Container, 
-  Label, 
-} from './styles'
+  Container,
+  Label,
+} from './styles';
 
 export function Header() {
   return (
@@ -14,5 +14,5 @@ export function Header() {
 
       <Label>Total de 12 carros</Label>
     </Container>
-  )
+  );
 }
