@@ -1,8 +1,11 @@
 import React from 'react'
+
 import { BackButton } from '../../shared/BackButton'
 
 import {
-  Container
+  Container,
+  ImageIndexes,
+  ImageIndex,
 } from './styles'
 
 export function Header() {
@@ -11,6 +14,14 @@ export function Header() {
       <BackButton 
         color="#000"
       />
+
+      <ImageIndexes>
+        <ImageIndex active={false} />
+        <ImageIndex active={false} />
+        <ImageIndex active={true} />
+        <ImageIndex active={false} />
+        <ImageIndex active={false} />
+      </ImageIndexes>
     </Container>
   )
 }
