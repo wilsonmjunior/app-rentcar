@@ -14,11 +14,11 @@ export const Title = styled.Text`
   color: ${({ theme }) => theme.colors.title};
 `;
 
-export const CarList = styled(
-  FlatList as new () => FlatList<CarProps>,
-).attrs({
+export const CarList = ((styled(FlatList).attrs({
   contentContainerStyle: {
     padding: 16,
   },
   showsVerticalScrollIndicator: false,
-})``;
+})`
+  background-color: 'white';
+` as unknown) as typeof FlatList<CarProps>);
