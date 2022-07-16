@@ -3,14 +3,14 @@ import { View } from 'react-native';
 import { ThemeProvider } from 'styled-components';
 import * as SplashScreen from 'expo-splash-screen';
 import { loadAsync } from 'expo-font';
-import { 
+import {
   Inter_400Regular,
-  Inter_500Medium
+  Inter_500Medium,
 } from '@expo-google-fonts/inter';
 import {
   Archivo_400Regular,
   Archivo_500Medium,
-  Archivo_600SemiBold
+  Archivo_600SemiBold,
 } from '@expo-google-fonts/archivo';
 
 import { CarDetails } from './src/screens/CarDetails';
@@ -25,15 +25,16 @@ export default function App() {
       try {
         await SplashScreen.preventAutoHideAsync();
 
-        await loadAsync({ 
+        await loadAsync({
           Inter_400Regular,
           Inter_500Medium,
           Archivo_400Regular,
           Archivo_500Medium,
           Archivo_600SemiBold,
         });
-     
-        await new Promise(resolve => setTimeout(resolve, 2000));
+
+        // eslint-disable-next-line no-promise-executor-return
+        await new Promise((resolve) => setTimeout(resolve, 2000));
       } catch (e) {
         console.warn(e);
       } finally {
@@ -66,4 +67,3 @@ export default function App() {
     </ThemeProvider>
   );
 }
-

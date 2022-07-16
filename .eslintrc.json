@@ -31,6 +31,8 @@
     "import/prefer-default-export": "off",
     "@typescript-eslint/no-empty-interface": "off",
     "react/jsx-props-no-spreading": "off",
+    "camelcase": "off",
+    "react/require-default-props": "off",
     // [
     //   "error",
     //   {
