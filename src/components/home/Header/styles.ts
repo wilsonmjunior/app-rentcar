@@ -1,22 +1,20 @@
-import styled from 'styled-components/native'
-
-import LogoSvg from './logo.svg';
+import { RFValue } from 'react-native-responsive-fontsize';
+import styled from 'styled-components/native';
 
 export const Container = styled.View`
   width: 100%;
-  height: 113px;
+  height: ${RFValue(113)}px;
 
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 0 10px 10px;
-  background-color: ${({ theme}) => theme.colors.header};
-`
 
-export const Logo = styled(LogoSvg)`
+  padding: 0 24px 32px;
+
+  background-color: ${({ theme }) => theme.colors.header};
 `;
 
 export const Label = styled.Text`
-  font-size: 15px;
-  color: ${({ theme}) => theme.colors.text};
+  font-size: ${RFValue(15)}px;
+  color: ${({ theme }) => theme.colors.text};
 `;
