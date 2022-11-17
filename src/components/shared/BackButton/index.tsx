@@ -4,7 +4,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { BorderlessButtonProps } from 'react-native-gesture-handler';
 
 import {
-  Container
+  Container,
 } from './styles';
 
 interface Props extends BorderlessButtonProps {
@@ -12,7 +12,7 @@ interface Props extends BorderlessButtonProps {
 }
 
 export function BackButton({ color }: Props) {
-  const theme = useTheme()
+  const theme = useTheme();
 
   return (
     <Container>
@@ -22,5 +22,5 @@ export function BackButton({ color }: Props) {
         color={color || theme.colors.text}
       />
     </Container>
-  )
+  );
 }

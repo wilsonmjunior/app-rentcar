@@ -8,7 +8,7 @@ export default {
     text: '#7A7A80',
     text_detail: '#AEAEB3',
     title: '#47474D',
-
+    off_title: '#FFFFFF',
     line: '#EBEFF0',
 
     main: '#DC1637',

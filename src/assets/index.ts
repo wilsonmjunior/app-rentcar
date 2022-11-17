@@ -4,6 +4,7 @@ import People from './people.svg';
 import Speed from './speed.svg';
 import Transmission from './transmission.svg';
 import Up from './up.svg';
+import Arrow from './arrow.svg';
 
 export {
   Gasoline,
@@ -12,4 +13,5 @@ export {
   Speed,
   Transmission,
   Up,
+  Arrow,
 };
