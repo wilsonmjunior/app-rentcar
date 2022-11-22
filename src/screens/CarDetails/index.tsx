@@ -1,9 +1,9 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { Accessory } from '../../components/car-details/Accessory';
 
 import { Header } from '../../components/car-details/Header';
 import { ImageSlider } from '../../components/car-details/ImageSlider';
-
+import { Button } from '../../components/shared/Button';
 import {
   Speed,
   Up,
@@ -13,6 +13,7 @@ import {
   People,
 } from '../../assets';
 
+import { useCarDetailsController } from './controller';
 import {
   Container,
   ImageSliderWrapper,
@@ -28,15 +29,9 @@ import {
   AccesoriesWrapper,
   Footer,
 } from './styles';
-import { Button } from '../../components/shared/Button';
 
 export function CarDetails() {
-  const price = useMemo(() => Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(580), []);
+  const { price } = useCarDetailsController();
 
   return (
     <Container>
