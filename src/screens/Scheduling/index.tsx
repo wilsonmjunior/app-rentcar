@@ -2,8 +2,10 @@ import React from "react";
 import { StatusBar } from "react-native";
 import { useTheme } from "styled-components/native";
 
-import { Arrow } from '../../assets';
 import { BackButton } from '../../components/shared/BackButton';
+import { Button } from "../../components/shared/Button";
+import { Calendar } from "../../components/scheduling/Calendar";
+import { Arrow } from '../../assets';
 
 import {
   Container,
@@ -15,6 +17,8 @@ import {
   DateTitle,
   DateValueWrapper,
   DateValue,
+  Content,
+  Footer,
 } from './styles';
 
 export function Scheduling() {
@@ -62,6 +66,16 @@ export function Scheduling() {
           </DateInfo>
         </RentalPeriod>
       </Header>
+
+      <Content>
+        <Calendar />
+      </Content>
+
+      <Footer>
+        <Button
+          title="Confirmar"
+        />
+      </Footer>
     </Container>
   );
 }
