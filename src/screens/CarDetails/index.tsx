@@ -1,5 +1,5 @@
 import React from 'react';
-import { Accessory } from '../../components/car-details/Accessory';
+import { Accessory } from '../../components/shared/Accessory';
 
 import { Header } from '../../components/car-details/Header';
 import { ImageSlider } from '../../components/car-details/ImageSlider';
