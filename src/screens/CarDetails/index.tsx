@@ -1,8 +1,8 @@
 import React from 'react';
-import { Accessory } from '../../components/shared/Accessory';
 
-import { Header } from '../../components/car-details/Header';
-import { ImageSlider } from '../../components/car-details/ImageSlider';
+import { Accessory } from '../../components/shared/Accessory';
+import { Header } from '../../components/shared/Header';
+import { ImageSlider } from '../../components/shared/ImageSlider';
 import { Button } from '../../components/shared/Button';
 import {
   Speed,
