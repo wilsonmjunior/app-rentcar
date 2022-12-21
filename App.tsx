@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { View } from 'react-native';
+import { StatusBar, View } from 'react-native';
 import { ThemeProvider } from 'styled-components';
 import * as SplashScreen from 'expo-splash-screen';
 import { loadAsync } from 'expo-font';
@@ -13,9 +13,8 @@ import {
   Archivo_600SemiBold,
 } from '@expo-google-fonts/archivo';
 
-import { CarDetails } from './src/screens/CarDetails';
-
 import theme from './src/styles/theme';
+import { Routes } from './src/routes';
 
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -33,8 +32,11 @@ export default function App() {
           Archivo_600SemiBold,
         });
 
-        // eslint-disable-next-line no-promise-executor-return
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(null);
+          }, 2000);
+        });
       } catch (e) {
         console.warn(e);
       } finally {
@@ -55,14 +57,18 @@ export default function App() {
     return null;
   }
 
-
   return (
     <ThemeProvider theme={theme}>
+      <StatusBar
+        barStyle='light-content'
+        translucent
+        backgroundColor='transparent'
+      />
       <View
         style={{ flex: 1 }}
         onLayout={onLayoutRootView}
       >
-        <CarDetails />
+        <Routes />
       </View>
     </ThemeProvider>
   );
